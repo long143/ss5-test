@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label >Diem Vat ly</label>
+<input type="text" id="vatLy">
+<label >Diem Hoa Hoc</label>
+<input type="text" id="hoaHoc">
+<label >Diem sinh hoc</label>
+<input type="text" id="sinhHoc">
+<button onclick="tongDiemVaAVG()">In ra tong diem va diem trung binh</button>
+<h1 id="tongDiem" style="color: yellow"> </h1>
+<h2 id="avg" style="color: orange"> </h2>
+<script>
+    //nhung kieu du lieu trong javascript
+    //number :1,2,3,-9
+    // const PI = 3.14;
+    //string :'long'; -> Chuỗi
+    // let name = 'long';
+    // let name1 = "long2";
+    //boolean : true/false
+    // let ismaried = false
+    //Array -> Mảng (number , string , boolean )
+    // let array = [1,'long',true]
+    // console.log(array[1])
+    // console.log(name1)
+    //object :đối tượng
+    // let information = {
+        //thành phần trong object:Key(khoá)-Value(giá trị)
+    //     name:'long',
+    //     age: 21
+    // }
+    // console.log(information)
+    // //null
+    // let anDanh = null;
+    //undefined
+    // let b;
+    // console.log(b)
+    //Clear: Nắm chắc chưa
+    //Custom:Lấy của người khác và sửa lại thành của mình
+    // if (2>1){
+    //     alert('DKD')
+    // }else {
+    //     alert('DKS')
+    // }
+    // let a =10;
+    // let b = a % 2;
+    // if (b==0){
+    //     alert('DKD')
+    // } else {
+    //     alert('DKS')
+    // }
+    // let a = 1;
+    // if (a > 0){
+    //     alert('So duong')
+    // } else {
+    //     alert('so am')
+    // }
+    // let b = 20;
+    // if (b >= 18){
+    //     alert('DKD')
+    // } else {
+    //     alert('DKS')
+    // }
+    // let array = [21,'long',true]
+    // console.log(array[1])
+
+    //cach 1 làm thuần Js
+    // let vatLy = +prompt('Nhap vao diem vat ly: ');
+    // let hoaHoc = +prompt('Nhap vao diem Hoa: ')
+    // let sinhHoc = +prompt('Nhap vao diem Sinh: ')
+    // let avg = (vatLy+hoaHoc+sinhHoc)/3;
+    // let sum = (vatLy+hoaHoc+sinhHoc);
+    // alert('tong diem: '+sum)
+    // alert('trung binh: '+avg)
+
+    // cach 2 : Tương tác vs HTML Thong qua DOM
+    function tongDiemVaAVG(){
+        let vatLy = +document.getElementById('vatLy').value;
+        let hoaHoc = +document.getElementById('hoaHoc').value;
+        let sinhHoc = +document.getElementById('sinhHoc').value;
+        let tongDiem = vatLy + hoaHoc + sinhHoc;
+        console.log('tongDiem---> ',tongDiem)
+        document.getElementById('tongDiem').innerHTML = 'Tong Diem: ' + tongDiem;
+        let avg = tongDiem/3;
+        document.getElementById('avg').innerHTML = 'Diem Trung Binh ' +avg;
+        console.log('avg---> ',avg)
+    }
+
+</script>
+</body>
+</html>
